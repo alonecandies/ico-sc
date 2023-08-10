@@ -10,11 +10,10 @@ async function main() {
 
   const token = await ethers.deployContract("Token");
   Config.setConfig(network + ".token", await token.getAddress());
-  const vault = await ethers.deployContract("Vault");
-  Config.setConfig(network + ".vault", await vault.getAddress());
-
-  console.log("Token address:", await token.getAddress());
-  console.log("Vault address:", await vault.getAddress());
+  const usdt = await ethers.deployContract("USDT");
+  Config.setConfig(network + ".usdt", await usdt.getAddress());
+  const alcico = await ethers.deployContract("ALCICO");
+  Config.setConfig(network + ".alcico", await alcico.getAddress());
 
   Config.saveConfig();
 }
