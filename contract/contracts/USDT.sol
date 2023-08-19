@@ -10,7 +10,7 @@ contract USDT is ERC20("Tether", "USDT"), ERC20Burnable, Ownable {
     uint private cap = 50_000_000_000_000_000 * 10 ** uint256(10);
 
     constructor() {
-        console.log("Token deployed with owner %s, cap %s", msg.sender, cap);
+        console.log("USDT deployed with owner %s, cap %s", msg.sender, cap);
         _mint(msg.sender, cap);
         transferOwnership(msg.sender);
     }

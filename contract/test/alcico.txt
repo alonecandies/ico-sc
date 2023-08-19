@@ -1,0 +1,14 @@
+- set right rate for usdt: owner                         x
+- set usdt address                                       x
+- get right token amount by token-usdt rate: owner       x
+- can buy token by usdt: alice, owner                    
+-> alice buy: 100 usdt transfer to alice 
+-> alice call buy to contract 
+-> contract transfer token to alice 
+-> usdt to contract
+   + right amount reduce usdt                            x
+   + right amount token received                         x
+   + buy exceed usdt of buyer balance                    x
+   + buy exceed amount of token balance in contract      x
+- can withdraw all usdt: owner                           x
+- other can't withdraw usdt                              x
